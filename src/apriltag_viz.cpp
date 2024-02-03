@@ -10,7 +10,7 @@
 class AprilVizNode : public rclcpp::Node {
 public:
     AprilVizNode(const rclcpp::NodeOptions options = rclcpp::NodeOptions())
-    : Node("apriltag_viz", rclcpp::NodeOptions(options).use_intra_process_comms(true))
+    : Node("AprilVizNode", rclcpp::NodeOptions(options).use_intra_process_comms(true))
     {
         get_parameter_or<std::string>("overlay_mode", overlay_mode, "axes");
 

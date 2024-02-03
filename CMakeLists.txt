@@ -18,7 +18,8 @@ ament_target_dependencies(apriltag_viz
   cv_bridge
   sensor_msgs
   apriltag_msgs)
-rclcpp_components_register_nodes(apriltag_viz "AprilVizNode")
+rclcpp_components_register_nodes(
+  apriltag_viz PLUGIN "AprilVizNode" EXECUTABLE "aprilviz_node")
 
 install(TARGETS apriltag_viz
   EXPORT export_${PROJECT_NAME}
